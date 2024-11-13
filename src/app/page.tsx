@@ -1,101 +1,93 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex flex-col items-center px-16 bg-[#252B42] overflow-hidden">
+      <nav className="p-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="text-white text-[24px] font-bold top-[13px] left-[136px]">
+            <span>BrandName</span>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="space-x-8 text-white hidden mr-[450px] md:flex ml-16 gap-21 text-[14px] leading-[24px] mt-[16px]">
+            <span>Home</span>
+            <span>Product</span>
+            <span>Pricing</span>
+            <span>Contact</span>
+          </div>
+
+          <div className="space-x-4 ">
+            <span className="text-[#FFFFFF] text-[14px] hover:text-[#CCCCCC] mr-2 top-[16px] ">
+              Login
+            </span>
+            <button className="bg-[#23A6F0] text-white px-4 py-2 rounded-[5px] text-[14px] gap-[45px] t-[3px]">
+              JOIN US
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </nav>
+
+      <div className="flex flex-col items-center gap-[40px] mt-[104px]">
+        <div className="text-center">
+          <div className="text-[#35A6F0] text-[16px] font-bold">Welcome</div>
+          <p className="text-[58px] font-bold text-[#FFFFFF] leading-[80px] mt-4">
+            Selling on the <br /> Internet Like a Pro
+          </p>
+          <p className="text-[#FFFFFF] mt-4 max-w-[542px] mx-auto leading-[30px]">
+            We know how large objects will act, but things on a <br />
+            small scale just do not act that way.
+          </p>
+          <div className="flex space-x-4 mt-[40px] justify-center items-center">
+            <button className="bg-[#35A6F0] text-white px-6 py-2 rounded-[5px]">
+              Get Quote Now
+            </button>
+            <button className="border border-[#35A6F0] text-[#35A6F0] px-6 py-2 rounded-[5px]">
+              {" "}
+              Learn More
+            </button>
+          </div>
+
+          {/*Cards Section*/}
+
+          <div className="flex flex-wrap justify-center mt-[80px] gap-[30px] mb-[80px]">
+            {/* First Card */}
+
+            <div className="bg-white text-black p-[35px] rounded-lg shadow-md w-[328px]">
+              <div className="w-20 h-20 rounded-xl bg-[#FCEBEB] mx-auto mc-4 ml-2"></div>
+              <h2 className="font-bold mt-[20px]">training Courses</h2>
+              <div className="h-[2px] bg-[#E74040] w-[50px] my-[10px]"></div>
+              <p>
+                The gradual accumulation of information about atomic and
+                small-scale behaviour...
+              </p>
+            </div>
+
+            {/* Second Card */}
+
+            <div className="bg-white text-black p-[35px] rounded-lg shadow-md w-[328px]">
+              <div className="w-20 h-20 rounded-xl bg-[#B9EAAB] mx-auto mc-4 ml-2"></div>
+              <h2 className="font-bold mt-[20px]">2,769 online courses</h2>
+              <div className="h-[2px] bg-[#E74040] w-[50px] my-[10px]"></div>
+              <p>
+                The gradual accumulation of information about atomic and
+                small-scale behaviour...
+              </p>
+            </div>
+
+            {/* Third Card */}
+
+            <div className="bg-[#35A6F0] text-white p-[35px] rounded-lg shadow-md w-[328px]">
+              <div className="w-20 h-20 rounded-xl bg-[#FFFF] mx-auto mc-4 ml-2"></div>
+              <h2 className="font-bold mt-[20px]">training courses</h2>
+              <div className="h-[2px] bg-white w-[50px] my-[10px]"></div>
+              <p>
+                The gradual accumulation of information about atomic and
+                small-scale behaviour...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
