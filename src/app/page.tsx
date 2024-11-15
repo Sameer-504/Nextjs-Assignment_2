@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function Home() {
   return (
     <div className="flex flex-col items-center px-16 bg-[#252B42] overflow-hidden">
